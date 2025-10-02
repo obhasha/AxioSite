@@ -7,8 +7,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <div className="text-xl font-bold mb-2">
-              Axio <span className="gradient-text">Tech</span>
+            <div className="flex items-center gap-3 mb-2">
+              <img 
+                src={`${import.meta.env.BASE_URL}AXIO TECH-11.png`}
+                alt="Axio Tech Logo" 
+                className="h-6 w-auto"
+              />
+              <div className="text-xl font-bold">
+                Axio <span className="gradient-text">Tech</span>
+              </div>
             </div>
             <p className="text-white/60 text-sm">Transforming ideas into powerful software solutions</p>
           </div>
