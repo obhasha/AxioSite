@@ -3,7 +3,7 @@ import { Linkedin, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-axio-dark py-12 border-t border-white/5">
+    <footer className="py-12 border-t border-white/5" style={{ backgroundColor: '#111827' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>

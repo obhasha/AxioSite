@@ -33,7 +33,7 @@ const Hero = () => {
             <button className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
               Get to know us
             </button>
-            <button className="px-8 py-3 bg-gradient-to-r from-axio-pink to-axio-purple hover:opacity-90 rounded-lg transition-all font-medium">
+            <button className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
               Start your project
             </button>
           </div>

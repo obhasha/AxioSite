@@ -28,7 +28,7 @@ const WhyAxio = () => {
   return (
     <section className="py-20 border-t border-b border-blue-500/30" style={{ borderStyle: 'dotted' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - All Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why AXIO Tech</h2>

@@ -9,8 +9,8 @@ export default {
       colors: {
         'axio-dark': '#030712',
         'axio-navy': '#101623',
-        'axio-pink': '#ff4d8f',
-        'axio-purple': '#b64dff',
+        'axio-pink': '#F9A8D4',
+        'axio-rose': '#F43F5E',
       },
     },
   },

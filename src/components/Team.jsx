@@ -2,12 +2,12 @@ import React from 'react';
 
 const Team = () => {
   const teamMembers = [
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
-    { name: 'Oshadi Warathewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
+    { name: 'Oshadi Wattuhewa', role: 'UX Lead' },
   ];
 
   return (
