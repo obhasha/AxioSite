@@ -33,7 +33,7 @@ const EngagementModels = () => {
   ];
 
   return (
-    <section className="py-20 bg-axio-navy/30">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Engagement Models</h2>
@@ -44,7 +44,7 @@ const EngagementModels = () => {
           {models.map((model, index) => {
             const Icon = model.icon;
             return (
-              <div key={index} className="bg-axio-navy/50 border border-white/10 rounded-xl p-8 hover:border-axio-pink/50 transition-all">
+              <div key={index} className="bg-[#101623]/50 border border-white/10 rounded-xl p-8 hover:border-axio-pink/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-br from-axio-pink to-axio-purple rounded-lg flex items-center justify-center mb-6">
                   <Icon size={28} />
                 </div>

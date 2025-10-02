@@ -76,7 +76,7 @@ const WhyAxio = () => {
           {clients.map((client, index) => {
             const Icon = client.icon;
             return (
-              <div key={index} className="bg-axio-navy/50 border border-white/10 rounded-lg p-6 hover:border-axio-pink/50 transition-all">
+              <div key={index} className="bg-[#101623]/50 border border-white/10 rounded-lg p-6 hover:border-axio-pink/50 transition-all">
                 <div className="w-12 h-12 bg-gradient-to-br from-axio-pink to-axio-purple rounded-lg flex items-center justify-center mb-4">
                   <Icon size={24} />
                 </div>
