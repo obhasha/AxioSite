@@ -8,7 +8,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src={`${import.meta.env.BASE_URL}AXIO TECH-11.png`}
+              src={`${import.meta.env.BASE_URL}AXIO_logo.png`}
               alt="Axio Tech Logo" 
               className="h-8 w-auto"
             />
