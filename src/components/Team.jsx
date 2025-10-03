@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Team = () => {
   const teamMembers = [
@@ -11,7 +12,14 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-20 border-t border-blue-500/30" style={{ borderStyle: 'dotted' }}>
+    <motion.section 
+      className="py-20 border-t border-blue-500/30" 
+      style={{ borderStyle: 'dotted' }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="max-w-xl">
@@ -40,7 +48,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

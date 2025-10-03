@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, RefreshCw, GitMerge } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const EngagementModels = () => {
   const models = [
@@ -33,7 +34,14 @@ const EngagementModels = () => {
   ];
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#111827' }}>
+    <motion.section 
+      className="py-20" 
+      style={{ backgroundColor: '#111827' }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Engagement Models</h2>
@@ -62,7 +70,7 @@ const EngagementModels = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

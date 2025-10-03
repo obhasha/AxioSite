@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const FromIdeaToScale = () => {
   const pillars = [
@@ -35,7 +36,14 @@ const FromIdeaToScale = () => {
   ];
 
   return (
-    <section id="services" className="py-20">
+    <motion.section 
+      id="services" 
+      className="py-20"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-[#101623] border border-white/5 rounded-3xl p-8 md:p-12">
           <div className="mb-12">
@@ -66,7 +74,7 @@ const FromIdeaToScale = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

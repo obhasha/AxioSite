@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rocket, Users, TrendingUp, Briefcase } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const WhyAxio = () => {
   const clients = [
@@ -26,7 +27,14 @@ const WhyAxio = () => {
   ];
 
   return (
-    <section className="py-20 border-t border-b border-blue-500/30" style={{ borderStyle: 'dotted' }}>
+    <motion.section 
+      className="py-20 border-t border-b border-blue-500/30" 
+      style={{ borderStyle: 'dotted' }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - All Content */}
@@ -64,7 +72,7 @@ const WhyAxio = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

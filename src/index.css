@@ -6,6 +6,10 @@
   body {
     @apply bg-axio-dark text-white antialiased;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {

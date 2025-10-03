@@ -1,8 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-24 overflow-hidden">
+    <motion.section 
+      id="home" 
+      className="relative min-h-screen pt-24 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Background Wave Image - Large Scale Behind Everything */}
       <div className="absolute flex items-center justify-center pointer-events-none">
         <img 
@@ -39,7 +46,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,11 +1,19 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32">
+    <motion.section 
+      id="contact" 
+      className="py-32"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mx-auto rounded-3xl p-12" style={{ backgroundColor: '#111827' }}>
+        <div className="max-w-4xl mx-auto rounded-3xl p-12" style={{ backgroundColor: '#111827' }}>
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's get connect</h2>
             <p className="text-white/70 text-lg mb-12">
@@ -36,7 +44,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
