@@ -7,23 +7,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
+            <span className="text-xl font-bold gradient-text">Axio Tech</span>
             <img 
               src={`${import.meta.env.BASE_URL}AXIO_logo.png`}
               alt="Axio Tech Logo" 
               className="h-8 w-auto"
             />
-            <span className="text-xl font-bold">Axio Tech</span>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-white hover:text-axio-pink transition-colors border-b-2 border-white pb-1">
+          <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+            <a href="#home" className="text-white hover:text-axio-pink transition-colors">
               Home
             </a>
             <a href="#services" className="text-white/70 hover:text-white transition-colors">
               Services
-            </a>
-            <a href="#about" className="text-white/70 hover:text-white transition-colors">
-              About us
             </a>
             <a href="#contact" className="text-white/70 hover:text-white transition-colors">
               Contact us
@@ -31,7 +28,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-white/70 hover:text-white transition-colors">
+            {/* <a href="#" className="text-white/70 hover:text-white transition-colors">
               <Linkedin size={18} />
             </a>
             <a href="#" className="text-white/70 hover:text-white transition-colors">
@@ -39,7 +36,7 @@ const Header = () => {
             </a>
             <a href="#" className="text-white/70 hover:text-white transition-colors">
               <Youtube size={18} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

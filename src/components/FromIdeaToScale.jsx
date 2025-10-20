@@ -46,13 +46,6 @@ const FromIdeaToScale = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-[#101623] border border-white/5 rounded-3xl p-8 md:p-12">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">From Idea to Scale</h2>
-            <p className="text-white/70 text-lg">
-              We're a boutique AI & Digital Services Agency helping ambitious startups, SMEs and growing business
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-12">
             {pillars.map((pillar, index) => (
               <div key={index} className="space-y-4">

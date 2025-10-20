@@ -13,33 +13,33 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-4xl mx-auto rounded-3xl p-12" style={{ backgroundColor: '#111827' }}>
+        <div className="max-w-6xl mx-auto rounded-3xl p-12 md:p-16" style={{ backgroundColor: '#1e293b' }}>
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's get connect</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to build what's next?</h2>
             <p className="text-white/70 text-lg mb-12">
-              Ready to start your next project? We'd love to hear from you. Get in touch and let's discuss how we can help bring your vision to life.
+              Whether you're validating an idea, scaling a product, or automating your business - we'll help you build, engage, and evolve.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <a href="mailto:hello@axio.tech" className="flex items-center gap-4 bg-[#101623]/80 border border-white/10 rounded-lg p-6 hover:border-axio-pink/50 transition-all group">
-              <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-axio-pink/20 transition-all">
-                <Mail size={24} />
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-white/60 mb-1">Send us an email</div>
-                <div className="font-medium">hello@axio.tech</div>
-              </div>
-            </a>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <a href="mailto:sales@axiotechnologies.com.au" className="flex items-center gap-4 bg-black/30 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all group">
+                <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center">
+                  <Mail size={20} className="text-white/70" />
+                </div>
+                <div className="text-left">
+                  <div className="gradient-text font-semibold mb-1">sales@axiotechnologies.com.au</div>
+                  <div className="text-sm text-white/60">Send us an email</div>
+                </div>
+              </a>
 
-            <a href="tel:+61470735341" className="flex items-center gap-4 bg-[#101623]/80 border border-white/10 rounded-lg p-6 hover:border-axio-pink/50 transition-all group">
-              <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-axio-pink/20 transition-all">
-                <Phone size={24} />
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-white/60 mb-1">Call us directly</div>
-                <div className="font-medium">+61 470735341</div>
-              </div>
-            </a>
+              <a href="tel:+61421576398" className="flex items-center gap-4 bg-black/30 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all group">
+                <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center">
+                  <Phone size={20} className="text-white/70" />
+                </div>
+                <div className="text-left">
+                  <div className="gradient-text font-semibold mb-1">+61 421 576 398</div>
+                  <div className="text-sm text-white/60">Call us directly</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

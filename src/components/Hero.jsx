@@ -31,17 +31,16 @@ const Hero = () => {
             in the digital era
           </h1>
           
+          <p className="text-white/70 text-lg md:text-xl mb-4 max-w-3xl mx-auto">
+            You have an idea, or a business that needs levelling up.
+          </p>
           <p className="text-white/70 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-            We transform ideas into powerful software solutions that drive your business forward.
-            Experience the future of technology today
+            We partner with you to build smart platforms, engage users meaningfully, and evolve digital systems that scale.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
-              Get to know us
-            </button>
-            <button className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
-              Start your project
+              Let's get started
             </button>
           </div>
         </div>
