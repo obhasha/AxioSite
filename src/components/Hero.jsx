@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="max-w-5xl mx-auto text-center pt-20 pb-12">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 px-4">
             Your partner to
             <br />
             <span className="gradient-text">build.engage.evolve</span>
