@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-axio-dark/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center md:justify-between">
           <div className="flex items-center gap-3">
             <span className="text-xl font-bold gradient-text">Axio Tech</span>
             <img 
@@ -27,7 +27,7 @@ const Header = () => {
             </a>
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             {/* <a href="#" className="text-white/70 hover:text-white transition-colors">
               <Linkedin size={18} />
             </a>

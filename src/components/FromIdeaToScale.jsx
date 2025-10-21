@@ -37,7 +37,7 @@ const FromIdeaToScale = () => {
 
   return (
     <motion.section 
-      id="services" 
+      id="ideas" 
       className="py-20"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
