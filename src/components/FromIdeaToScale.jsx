@@ -38,7 +38,8 @@ const FromIdeaToScale = () => {
   return (
     <motion.section 
       id="ideas" 
-      className="py-20"
+      className="py-20 relative"
+      style={{ backgroundColor: '#030712' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
