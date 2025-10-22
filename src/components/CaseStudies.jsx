@@ -20,7 +20,7 @@ const CaseStudies = () => {
   return (
     <motion.section 
       className="py-20"
-      style={{ backgroundColor: '#111827' }}
+      style={{ backgroundColor: '#0c131f' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -36,7 +36,7 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <motion.div 
               key={index}
-              className="bg-[#1f2937] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all cursor-pointer group"
+              className="border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all cursor-pointer group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

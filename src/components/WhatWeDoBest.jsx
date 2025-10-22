@@ -40,7 +40,7 @@ const WhatWeDoBest = () => {
     <motion.section 
       id="services"
       className="py-20"
-      style={{ backgroundColor: '#111827' }}
+      style={{ backgroundColor: '#0c131f' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

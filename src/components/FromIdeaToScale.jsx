@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const FromIdeaToScale = () => {
   const pillars = [
     {
-      title: '.build',
+      title: 'Build',
       subtitle: 'Turning ideas into reality',
       items: [
         'Product strategy & roadmap',
@@ -15,7 +15,7 @@ const FromIdeaToScale = () => {
       ]
     },
     {
-      title: '.engage',
+      title: 'Engage',
       subtitle: 'Connecting with users & markets',
       items: [
         'Digital presence (websites, SEO, content strategy)',
@@ -25,7 +25,7 @@ const FromIdeaToScale = () => {
       ]
     },
     {
-      title: '.evolve',
+      title: 'Evolve',
       subtitle: 'Scaling & unlocking efficiency',
       items: [
         'Process automation & AI integration',
