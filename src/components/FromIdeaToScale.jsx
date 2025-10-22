@@ -39,7 +39,7 @@ const FromIdeaToScale = () => {
     <motion.section 
       id="ideas" 
       className="pt-20 pb-20 relative -mt-10 md:-mt-20"
-      style={{ backgroundColor: '#030712' }}
+      style={{ backgroundColor: 'transparent', paddingTop: '0rem' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -50,10 +50,10 @@ const FromIdeaToScale = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {pillars.map((pillar, index) => (
               <div key={index} className="space-y-4">
-                <h3 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold gradient-text">
                   {pillar.title}
                 </h3>
-                <p className="text-white/70 italic text-base mb-6">{pillar.subtitle}</p>
+                <p className="text-white/70 italic text-base mb-6" style={{ marginTop: '0px'}}>{pillar.subtitle}</p>
                 <div className="border-b border-white/10 mb-6"></div>
                 <ul className="space-y-3">
                   {pillar.items.map((item, i) => (

@@ -40,7 +40,7 @@ const WhatWeDoBest = () => {
     <motion.section 
       id="services"
       className="py-20"
-      style={{ backgroundColor: '#0c131f' }}
+      style={{ backgroundColor: '#0b111d' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -60,7 +60,7 @@ const WhatWeDoBest = () => {
             return (
               <motion.div 
                 key={index} 
-                className="bg-[#0c131f] border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-all"
+                className="bg-[#0b111d] border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-all"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

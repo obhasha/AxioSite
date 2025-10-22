@@ -21,19 +21,19 @@ const CaseStudies = () => {
       title: 'Melbourne-based Sports Tech Startup - AFL Player Tracking',
       description: 'Revolutionizing AFL analytics with computer vision and AI',
       tags: 'MVP, AI Systems, UX',
-      image: 'icoach.jpg'
+      image: 'ICoachLowop.jpg'
     },
     {
       title: 'Melbourne-based Healthcare Clinic - Digital Growth',
       description: 'A conversion-focused website, to drive patient bookings',
       tags: 'UX, Web, Branding',
-      image: 'med.jpg'
+      image: 'medlowop.jpg'
     },
     {
       title: 'ScreenPeace - Incident Reporting & Resolution Platform',
       description: 'A smart incident reporting and resolution platform that empowers cinema patrons',
       tags: 'Web, Mobile, UX',
-      image: 'med.jpg'
+      image: 'ScreenPeaceWhite.jpg'
     }
   ];
 
@@ -67,7 +67,7 @@ const CaseStudies = () => {
   return (
     <motion.section 
       className="py-20"
-      style={{ backgroundColor: '#0c131f' }}
+      style={{ backgroundColor: '#0b111d' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -142,7 +142,7 @@ const CaseStudies = () => {
                   </div>
 
                   {/* Content Section */}
-                  <div className="px-2 py-2">
+                  <div className="px-0 py-8">
                     <h3 className="text-lg font-bold mb-1 group-hover:text-axio-pink transition-colors">
                       {study.title}
                     </h3>
@@ -153,7 +153,7 @@ const CaseStudies = () => {
                       {study.tags.split(', ').map((tag, i) => (
                         <span 
                           key={i} 
-                          className="text-xs font-semibold gradient-text"
+                          className="text-sm font-semibold gradient-text"
                         >
                           {tag}
                         </span>

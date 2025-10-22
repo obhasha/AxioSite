@@ -31,14 +31,14 @@ const Hero = () => {
             in the digital era
           </h1>
           
-          <p className="text-white/90 text-base sm:text-lg md:text-xl mb-3 max-w-4xl mx-auto">
+          <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-4xl mx-auto">
             You have an idea, or a business that needs levelling up.
           </p>
-          <p className="text-white/90 text-base sm:text-lg md:text-xl mb-12 mx-auto leading-relaxed whitespace-nowrap px-4">
+          <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-4xl mx-auto">
             We partner with you to build smart platforms, engage users meaningfully, and evolve digital systems that scale.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <a href="#contact" className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
               Let's get started
             </a>

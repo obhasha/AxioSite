@@ -7,9 +7,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-center md:justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-xl font-bold gradient-text">Axio Tech</span>
             <img 
-              src={`${import.meta.env.BASE_URL}AXIO_logo.png`}
+              src={`${import.meta.env.BASE_URL}AXIO TECH-FULL.png`}
               alt="Axio Tech Logo" 
               className="h-8 w-auto"
             />
