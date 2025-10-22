@@ -38,7 +38,7 @@ const FromIdeaToScale = () => {
   return (
     <motion.section 
       id="ideas" 
-      className="py-20 relative"
+      className="pt-20 pb-20 relative -mt-10 md:-mt-20"
       style={{ backgroundColor: '#030712' }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
