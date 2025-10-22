@@ -13,7 +13,7 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto rounded-3xl p-6 sm:p-8 md:p-16" style={{ backgroundColor: '#1e293b' }}>
+        <div className="max-w-6xl mx-auto rounded-3xl p-6 sm:p-8 md:p-16" style={{ backgroundColor: '#0c131f' }}>
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Ready to build what's next?</h2>
             <p className="text-white/70 text-base sm:text-lg mb-8 sm:mb-12 px-2">

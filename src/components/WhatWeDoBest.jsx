@@ -60,7 +60,7 @@ const WhatWeDoBest = () => {
             return (
               <motion.div 
                 key={index} 
-                className="bg-[#0f1629] border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-all"
+                className="bg-[#0c131f] border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-all"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

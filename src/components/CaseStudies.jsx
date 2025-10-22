@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const CaseStudies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const caseStudies = [
     {
@@ -20,7 +31,7 @@ const CaseStudies = () => {
     },
     {
       title: 'ScreenPeace - Incident Reporting & Resolution Platform',
-      description: 'A smart incident reporting and resolution platform that empowers cinema patrons and staff to seamlessly report, manage, and resolve in-theatre disruptions in real time.',
+      description: 'A smart incident reporting and resolution platform that empowers cinema patrons',
       tags: 'Web, Mobile, UX',
       image: 'med.jpg'
     }
@@ -38,6 +49,19 @@ const CaseStudies = () => {
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
+  };
+
+  const getTranslateX = () => {
+    if (isMobile) {
+      // For mobile: 85% width + 16px gap
+      const cardWidth = 85;
+      const gap = 16;
+      return `calc(-${currentIndex * cardWidth}% - ${currentIndex * gap}px)`;
+    }
+    // For desktop: 40% width + 32px gap
+    const cardWidth = 40;
+    const gap = 32;
+    return `calc(-${currentIndex * cardWidth}% - ${currentIndex * gap}px)`;
   };
 
   return (
@@ -60,7 +84,7 @@ const CaseStudies = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 md:-translate-x-20 z-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full p-3 transition-all"
+            className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-20 z-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full p-3 transition-all"
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} className="text-white" />
@@ -68,7 +92,7 @@ const CaseStudies = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 md:translate-x-20 z-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full p-3 transition-all"
+            className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-20 z-10 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full p-3 transition-all"
             aria-label="Next slide"
           >
             <ChevronRight size={24} className="text-white" />
@@ -78,15 +102,29 @@ const CaseStudies = () => {
           <div className="overflow-hidden">
             <motion.div
               className="flex gap-4 md:gap-8"
-              animate={{ 
-                x: `calc(-${currentIndex * 40}% - ${currentIndex * 32}px)`
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipeThreshold = 50;
+                if (offset.x > swipeThreshold) {
+                  prevSlide();
+                } else if (offset.x < -swipeThreshold) {
+                  nextSlide();
+                }
               }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              animate={{ 
+                x: getTranslateX()
+              }}
+              transition={{ 
+                duration: 0.5,
+                ease: [0.4, 0, 0.2, 1]
+              }}
             >
               {caseStudies.map((study, index) => (
                 <motion.div 
                   key={index}
-                  className="border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all cursor-pointer group flex-shrink-0 w-[85%] md:w-[40%]"
+                  className="rounded-2xl overflow-hidden transition-all cursor-pointer group flex-shrink-0 w-[85%] md:w-[40%]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -104,11 +142,11 @@ const CaseStudies = () => {
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-8">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-axio-pink transition-colors">
+                  <div className="px-2 py-2">
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-axio-pink transition-colors">
                       {study.title}
                     </h3>
-                    <p className="text-white/70 text-sm mb-4 leading-relaxed">
+                    <p className="text-white/70 text-sm mb-1 leading-relaxed">
                       {study.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
