@@ -14,6 +14,7 @@ const GrowthCovered = () => {
     },
     {
       title: 'Solution',
+      icon: '/solutionIcon.png',
       items: [
         'Launch-ready websites & MVPs that attract investors.',
         'Digital strategy & content that win customers.',
@@ -22,6 +23,7 @@ const GrowthCovered = () => {
     },
     {
       title: 'Axio Advantage',
+      icon: '/challengeIcon.png',
       items: [
         'Ideas transformed into investor-ready products.',
         'Customers engaged through smart design & strategy.',
@@ -53,9 +55,17 @@ const GrowthCovered = () => {
             <div key={index} className="space-y-4">
               <div className="mb-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-6 h-6 rounded-full border-2 border-axio-pink flex items-center justify-center flex-shrink-0">
-                    <div className="w-1.5 h-1.5 rounded-full bg-axio-pink"></div>
-                  </div>
+                  {section.icon ? (
+                    <img 
+                      src={section.icon} 
+                      alt={`${section.title} icon`} 
+                      className="w-6 h-6 flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-6 h-6 rounded-full border-2 border-axio-pink flex items-center justify-center flex-shrink-0">
+                      <div className="w-1.5 h-1.5 rounded-full bg-axio-pink"></div>
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold text-white">
                     {section.title}
                   </h3>
