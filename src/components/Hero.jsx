@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import waveBg from '/wave-bg.png';
 
 const Hero = () => {
   return (
@@ -13,8 +14,10 @@ const Hero = () => {
       {/* Background Wave Image - Positioned at bottom */}
       <div className="absolute bottom-0 left-0 right-0 w-full pointer-events-none overflow-hidden" style={{ height: '30vh' }}>
         <img 
-          src={`${import.meta.env.BASE_URL}wave-bg.png`}
-          alt="Wave background" 
+          src={waveBg}
+          alt="Wave background"
+          loading="lazy"
+          decoding="async"
           className="absolute bottom-0 right-0 w-full h-full object-cover object-bottom-right"
           style={{ transform: 'scale(0.7)' }}
         />

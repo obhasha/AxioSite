@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import graphicImg from '/graphic.png';
 
 const WhyAxio = () => {
   const clients = [
@@ -52,8 +53,10 @@ const WhyAxio = () => {
           {/* Right Column - Graphic */}
           <div className="relative flex items-center justify-center">
             <img 
-              src={`${import.meta.env.BASE_URL}graphic.png`}
-              alt="Technology illustration" 
+              src={graphicImg}
+              alt="Technology illustration"
+              loading="lazy"
+              decoding="async"
               className="w-full max-w-md"
             />
           </div>

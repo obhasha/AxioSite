@@ -1,5 +1,6 @@
 import React from 'react';
 import { Linkedin, Instagram, Youtube } from 'lucide-react';
+import logo from '/AXIO TECH-FULL.png';
 
 const Header = () => {
   return (
@@ -8,8 +9,12 @@ const Header = () => {
         <div className="flex items-center justify-center md:justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src={`${import.meta.env.BASE_URL}AXIO TECH-FULL.png`}
-              alt="Axio Tech Logo" 
+              src={logo}
+              alt="Axio Tech Logo"
+              width="150"
+              height="32"
+              loading="eager"
+              decoding="async"
               className="h-8 w-auto"
             />
           </div>

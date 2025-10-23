@@ -1,6 +1,8 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
+import challengeIcon from '/challengeIcon.png';
+import solutionIcon from '/solutionIcon.png';
 
 const GrowthCovered = () => {
   const sections = [
@@ -14,7 +16,7 @@ const GrowthCovered = () => {
     },
     {
       title: 'Solution',
-      icon: '/solutionIcon.png',
+      icon: solutionIcon,
       items: [
         'Launch-ready websites & MVPs that attract investors.',
         'Digital strategy & content that win customers.',
@@ -23,7 +25,7 @@ const GrowthCovered = () => {
     },
     {
       title: 'Axio Advantage',
-      icon: '/challengeIcon.png',
+      icon: challengeIcon,
       items: [
         'Ideas transformed into investor-ready products.',
         'Customers engaged through smart design & strategy.',
@@ -59,6 +61,10 @@ const GrowthCovered = () => {
                     <img 
                       src={section.icon} 
                       alt={`${section.title} icon`} 
+                      width="24"
+                      height="24"
+                      loading="eager"
+                      decoding="async"
                       className="w-6 h-6 flex-shrink-0"
                     />
                   ) : (

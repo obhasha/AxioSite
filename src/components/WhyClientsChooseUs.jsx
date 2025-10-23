@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
+import workImg from '/workimg.png';
 
 const WhyClientsChooseUs = () => {
   const reasons = [
@@ -42,8 +43,10 @@ const WhyClientsChooseUs = () => {
           {/* Right Column - Image */}
           <div className="relative flex items-center justify-center">
             <img 
-              src={`${import.meta.env.BASE_URL}workimg.png`}
-              alt="Team collaboration" 
+              src={workImg}
+              alt="Team collaboration"
+              loading="lazy"
+              decoding="async"
               className="w-full rounded-2xl"
             />
           </div>

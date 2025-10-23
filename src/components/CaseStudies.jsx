@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import icoachImg from '/ICoachLowop.jpg';
+import medImg from '/medlowop.jpg';
+import screenPeaceImg from '/ScreenPeaceWhite.jpg';
 
 const CaseStudies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,19 +24,19 @@ const CaseStudies = () => {
       title: 'Melbourne-based Sports Tech Startup - AFL Player Tracking',
       description: 'Revolutionizing AFL analytics with computer vision and AI',
       tags: 'MVP, AI Systems, UX',
-      image: 'ICoachLowop.jpg'
+      image: icoachImg
     },
     {
       title: 'Melbourne-based Healthcare Clinic - Digital Growth',
       description: 'A conversion-focused website, to drive patient bookings',
       tags: 'UX, Web, Branding',
-      image: 'medlowop.jpg'
+      image: medImg
     },
     {
       title: 'ScreenPeace - Incident Reporting & Resolution Platform',
       description: 'A smart incident reporting and resolution platform that empowers cinema patrons',
       tags: 'Web, Mobile, UX',
-      image: 'ScreenPeaceWhite.jpg'
+      image: screenPeaceImg
     }
   ];
 
@@ -133,8 +136,10 @@ const CaseStudies = () => {
                   {/* Image Section */}
                   <div className="relative h-64 md:h-80 overflow-hidden">
                     <img 
-                      src={`${import.meta.env.BASE_URL}${study.image}`}
+                      src={study.image}
                       alt={study.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                     {/* Mockup overlay effect */}
