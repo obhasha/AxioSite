@@ -8,6 +8,7 @@ import screenPeaceImg from '/ScreenPeaceWhite.jpg';
 const CaseStudies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [loadedImages, setLoadedImages] = useState({});
 
   useEffect(() => {
     const checkMobile = () => {
@@ -52,6 +53,10 @@ const CaseStudies = () => {
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
+  };
+
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
   };
 
   const getTranslateX = () => {
@@ -134,13 +139,21 @@ const CaseStudies = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   {/* Image Section */}
-                  <div className="relative h-64 md:h-80 overflow-hidden">
+                  <div className="relative h-64 md:h-80 overflow-hidden bg-white/5">
+                    {/* Loading skeleton */}
+                    {!loadedImages[index] && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 animate-pulse">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                      </div>
+                    )}
                     <img 
                       src={study.image}
                       alt={study.title}
-                      loading="lazy"
+                      loading={index === 0 ? "eager" : index === 1 ? "lazy" : "lazy"}
                       decoding="async"
-                      className="w-full h-full object-cover"
+                      fetchPriority={index === currentIndex ? "high" : index === currentIndex + 1 || index === currentIndex - 1 ? "low" : "auto"}
+                      onLoad={() => handleImageLoad(index)}
+                      className={`w-full h-full object-cover transition-opacity duration-300 ${loadedImages[index] ? 'opacity-100' : 'opacity-0'}`}
                     />
                     {/* Mockup overlay effect */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
