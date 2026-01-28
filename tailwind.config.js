@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'axio-dark': '#0a0e27',
-        'axio-navy': '#1a1f3a',
-        'axio-pink': '#ff4d8f',
-        'axio-purple': '#b64dff',
+        'axio-dark': '#030712',
+        'axio-navy': '#101623',
+        'axio-pink': '#F9A8D4',
+        'axio-rose': '#F43F5E',
       },
     },
   },

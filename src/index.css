@@ -6,11 +6,20 @@
   body {
     @apply bg-axio-dark text-white antialiased;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-axio-pink via-axio-purple to-axio-pink bg-clip-text text-transparent;
+    background: linear-gradient(90deg, #F9A8D4 0%, #F43F5E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: 0.16em;
+    display: inline-block;
   }
 }
 

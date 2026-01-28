@@ -1,11 +1,32 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import waveBg from '/wave-bg.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-24 pb-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-5xl mx-auto text-center pt-20">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+    <motion.section 
+      id="home" 
+      className="relative min-h-screen flex flex-col overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Background Wave Image - Positioned at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 w-full pointer-events-none overflow-hidden" style={{ height: '30vh' }}>
+        <img 
+          src={waveBg}
+          alt="Wave background"
+          loading="lazy"
+          decoding="async"
+          className="absolute bottom-0 right-0 w-full h-full object-cover object-bottom-right"
+          style={{ transform: 'scale(0.7)' }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-32 md:pt-40 pb-10">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
             Your partner to
             <br />
             <span className="gradient-text">build.engage.evolve</span>
@@ -13,54 +34,21 @@ const Hero = () => {
             in the digital era
           </h1>
           
-          <p className="text-white/70 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-            We transform ideas into powerful software solutions that drive your business forward.
-            Experience the future of technology today
+          <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-4xl mx-auto">
+            You have an idea, or a business that needs levelling up.
+          </p>
+          <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-4xl mx-auto">
+            We partner with you to build smart platforms, engage users meaningfully, and evolve digital systems that scale.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-            <button className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
-              Get to know us
-            </button>
-            <button className="px-8 py-3 bg-gradient-to-r from-axio-pink to-axio-purple hover:opacity-90 rounded-lg transition-all font-medium">
-              Start your project
-            </button>
-          </div>
-        </div>
-
-        {/* Wave Visual */}
-        <div className="relative h-80 flex items-center justify-center">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <svg width="600" height="300" viewBox="0 0 600 300" className="opacity-80">
-              <defs>
-                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ff4d8f', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#b64dff', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-              {[...Array(40)].map((_, i) => {
-                const x = i * 15;
-                const baseY = 150;
-                const amplitude = 100 + Math.sin(i * 0.3) * 50;
-                const offset = Math.sin(i * 0.2) * 30;
-                return (
-                  <line
-                    key={i}
-                    x1={x}
-                    y1={baseY - amplitude + offset}
-                    x2={x}
-                    y2={baseY + offset}
-                    stroke="url(#waveGradient)"
-                    strokeWidth="3"
-                    opacity={0.6 + Math.sin(i * 0.15) * 0.4}
-                  />
-                );
-              })}
-            </svg>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <a href="#contact" className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg transition-all">
+              Let's get started
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
