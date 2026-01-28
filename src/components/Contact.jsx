@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <motion.section 
-      id="contact" 
+    <motion.section
+      id="contact"
       className="py-32"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -31,12 +31,22 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="tel:+61421576398" className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 bg-black/30 border border-white/10 rounded-xl p-4 sm:p-6 hover:border-white/20 transition-all group">
+              <a href="tel:+61406958966" className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 bg-black/30 border border-white/10 rounded-xl p-4 sm:p-6 hover:border-white/20 transition-all group">
                 <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone size={20} className="text-white/70" />
                 </div>
                 <div className="text-left">
-                  <div className="gradient-text font-semibold mb-1 text-sm sm:text-base">+61 421 576 398</div>
+                  <div className="gradient-text font-semibold mb-1 text-sm sm:text-base">+61 406 958 966 </div>
+                  <div className="text-xs sm:text-sm text-white/60">Call us directly</div>
+                </div>
+              </a>
+
+              <a href="tel:+61424954413" className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 bg-black/30 border border-white/10 rounded-xl p-4 sm:p-6 hover:border-white/20 transition-all group md:col-span-2 md:w-[calc(50%-0.75rem)] md:mx-auto">
+                <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone size={20} className="text-white/70" />
+                </div>
+                <div className="text-left">
+                  <div className="gradient-text font-semibold mb-1 text-sm sm:text-base">+61 424 954 413</div>
                   <div className="text-xs sm:text-sm text-white/60">Call us directly</div>
                 </div>
               </a>
